@@ -55,11 +55,12 @@ def plot_timestamps(df, start=None, end=None):
     plt.subplots_adjust(hspace=0, wspace=0  )
     plt.show()
 
-data = {'timestamp': ['2021-01-01 10:00:00', '2021-01-01 11:00:00', '2021-01-01 12:00:00', '2021-01-01 13:30:00', '2021-01-01 14:00:00', '2021-01-01 15:00:00', '2021-01-01 19:00:00'],
-        'value': [3, 4, 3, 7, 8, 3, 5],
-        'value2': [4, 4, 5, 4, 4, 4, 4],
-        'value3': [1, 4, 5, 3, 7, 4, 4]}
-df = pd.DataFrame(data)
-df['timestamp'] = pd.to_datetime(df['timestamp'])
-plot_timestamps(df, pd.to_datetime('2021-01-01 10:30:00'), pd.to_datetime('2021-01-01 15:30:00'))
+if __name__ == "__main__":
+    data = {'timestamp': ['2021-01-01 10:00:00', '2021-01-01 11:00:00', '2021-01-01 12:00:00', '2021-01-01 13:30:00', '2021-01-01 14:00:00', '2021-01-01 15:00:00', '2021-01-01 19:00:00'],
+            'value': [3, 4, 3, 7, 8, 3, 5],
+            'value2': [4, 4, 5, 4, 4, 4, 4],
+            'value3': [1, 4, 5, 3, 7, 4, 4]}
+    df = pd.DataFrame(data)
+    df['timestamp'] = pd.to_datetime(df['timestamp'])
+    plot_timestamps(df, pd.to_datetime('2021-01-01 10:30:00'), pd.to_datetime('2021-01-01 15:30:00'))
 # %%
